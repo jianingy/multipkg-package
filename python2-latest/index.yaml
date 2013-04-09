@@ -1,0 +1,13 @@
+---
+default:
+  name: python2-latest
+  summary: 'Python is an interpreted, interactive, object-oriented programming language'
+  version: '2.7.3'
+  http: http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
+rpm:
+  buildrequires:
+    - bzip2-devel
+    - sqlite-devel
+    - readline-devel
+    - openssl-devel
+    - zlib-devel
