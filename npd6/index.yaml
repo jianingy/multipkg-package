@@ -1,0 +1,5 @@
+default:
+  name: npd6
+  version: 1.0.0
+  http: http://npd6.googlecode.com/files/npd6-1.0.0.tar.gz
+  summary: 'A Linux daemon to provide a proxy service for IPv6 Neighbor Solcitations received by a gateway routing device.'
