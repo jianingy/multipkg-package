@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PHP_CGI=$(which 2>/dev/null /usr/local/bin/php-cgi /usr/bin/php-cgi)
+PHP_CGI_NAME=`basename $PHP_CGI`
+PHP_CGI_ARGS=
+
+exec 2>&1
+exec envdir ./env $PHP_CGI -b php-cgi.socket

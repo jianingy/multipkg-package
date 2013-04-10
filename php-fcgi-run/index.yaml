@@ -1,0 +1,5 @@
+---
+default:
+  name: php-fcgi-run
+  version: 1.0
+  summary: run php fast-cgi using daemontools
