@@ -1,0 +1,6 @@
+#!/bin/sh
+
+./configure --prefix=/usr/local
+
+mkdir -p $DESTDIR/usr/local/bin
+make install DESTDIR=$DESTDIR
