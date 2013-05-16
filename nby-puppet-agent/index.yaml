@@ -1,0 +1,5 @@
+---
+default:
+  name: nby-puppet-agent
+  version: 1.0
+  summary: run puppet-agent with daemontools using our master server

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+exec 2>&1
+exec puppet agent --server node-hangzhou.systemadm.in --onetime --no-daemonize
