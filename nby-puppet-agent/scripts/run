@@ -1,4 +1,5 @@
 #!/bin/sh
 
+sleep 30
 exec 2>&1
-exec puppet agent --server node-hangzhou.systemadm.in --onetime --no-daemonize
+exec env MASTER_NODE=node-hangzhou.systemadm.in ./run-agent.sh
