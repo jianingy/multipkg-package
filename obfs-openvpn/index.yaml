@@ -4,6 +4,7 @@ default:
   summary: obfuscate version openvpn
   version: '2.2.2'
   http: http://swupdate.openvpn.org/community/releases/openvpn-2.2.2.tar.gz
+  buildprefix: /opt/obfs-openvpn
 deb:
  buildrequires:
    - libssl-dev
