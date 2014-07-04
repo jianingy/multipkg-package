@@ -3,5 +3,5 @@ default:
   release: '1'
   name: rxvt-unicode
   summary: The Editor
-  version: '9.19'
-  http: http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.19.tar.bz2
+  version: '9.20'
+  http: http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.20.tar.bz2
