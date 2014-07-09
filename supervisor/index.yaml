@@ -1,0 +1,7 @@
+---
+default:
+  name: supervisor
+  version: "3.0b2"
+  pypi: supervisor
+  summary: A system for allowing the control of process state on UNIX.
+  python: /usr/bin/python
