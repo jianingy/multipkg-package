@@ -4,11 +4,11 @@ cd runit-2.1.2 || exit 111
 package/compile || exit 111
 
 
-mkdir -p $DESTDIR$PREFIX/bin $DESTDIR$PREFIX/share/man/man8
+mkdir -p $DESTDIR$PREFIX/sbin $DESTDIR$PREFIX/share/man/man8
 
 for bin in command/*; do
-  echo install -m755 $bin $DESTDIR$PREFIX/bin/$(basename $bin)
-  install -m755 $bin $DESTDIR$PREFIX/bin/$(basename $bin) || exit 111
+  echo install -m755 $bin $DESTDIR$PREFIX/sbin/$(basename $bin)
+  install -m755 $bin $DESTDIR$PREFIX/sbin/$(basename $bin) || exit 111
 done
 for man in man/*; do
   echo install -m644 $man $DESTDIR$PREFIX/share/man/man8/$(basename $man) 
