@@ -1,0 +1,8 @@
+---
+default:
+  name: runit
+  release: '1'
+  summary: 'a UNIX init scheme with service supervision'
+  version: '2.1.2'
+  http:  http://smarden.org/runit/runit-2.1.2.tar.gz
+  buildprefix: /usr
