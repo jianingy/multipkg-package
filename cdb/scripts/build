@@ -1,0 +1,9 @@
+#!/bin/sh
+pwd
+sed -i -e 's#gcc#gcc -include /usr/include/errno.h #g' conf-cc
+make
+mkdir -p $DESTDIR/usr/bin
+for command in cdbmake cdbdump cdbget cdbstats; do
+  install -m755 $command $DESTDIR/usr/bin
+done
+
