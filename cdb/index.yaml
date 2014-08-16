@@ -2,6 +2,6 @@ default:
   name: cdb
   #http: http://cr.yp.to/cdb/cdb-0.75.tar.gz
   version: '0.75'
-  release: 1
+  release: 3
   summary: A collection of tools for managing UNIX services.
 

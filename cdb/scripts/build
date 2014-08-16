@@ -3,7 +3,9 @@ pwd
 sed -i -e 's#gcc#gcc -include /usr/include/errno.h #g' conf-cc
 make
 mkdir -p $DESTDIR/usr/bin
-for command in cdbmake cdbdump cdbget cdbstats; do
+for command in cdbmake cdbdump cdbget cdbstats cdbtest; do
   install -m755 $command $DESTDIR/usr/bin
 done
 
+mkdir -p $DESTDIR/usr/include
+install -m644 cdb.h $DESTDIR/usr/include/cdb.h
