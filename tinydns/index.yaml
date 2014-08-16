@@ -1,0 +1,7 @@
+default:
+  name: nostack-djbdns
+  http: 'http://cr.yp.to/djbdns/djbdns-1.05.tar.gz'
+  version: '1.05'
+  release: 1
+  summary: djb's dns
+
