@@ -1,0 +1,12 @@
+---
+default:
+  name: cv
+  release: '1'
+  summary: Linux tool to show progress for cp, rm, dd, ...
+  version: '0.4.1'
+  http: https://codeload.github.com/Xfennec/cv/tar.gz/v0.4.1
+  buildprefix: /usr
+
+deb:
+  buildrequires:
+    - libncurses5-dev

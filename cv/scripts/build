@@ -1,0 +1,3 @@
+#!/bin/sh
+make
+make install PREFIX=$DESTDIR/$PREFIX
