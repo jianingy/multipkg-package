@@ -1,11 +1,12 @@
 #!/bin/sh
 pwd
 sed -i -e 's#gcc#gcc -include /usr/include/errno.h #g' conf-cc
+echo $PREFIX > conf-home
 make
-mkdir -p $DESTDIR/usr/bin
-for command in cdbmake cdbdump cdbget cdbstats cdbtest; do
-  install -m755 $command $DESTDIR/usr/bin
+mkdir -p $DESTDIR$PREFIX/bin
+for command in cdbmake cdbdump cdbget cdbstats cdbtest cdbmake-12; do
+  install -m755 $command $DESTDIR$PREFIX/bin
 done
 
-mkdir -p $DESTDIR/usr/include
-install -m644 cdb.h $DESTDIR/usr/include/cdb.h
+mkdir -p $DESTDIR$PREFIX/include
+install -m644 cdb.h $DESTDIR$PREFIX/include/cdb.h
