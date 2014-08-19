@@ -2,6 +2,6 @@
 cd daemontools-$PACKAGEVERSION
 sed -i -e 's#gcc#gcc -include /usr/include/errno.h #g' src/conf-cc
 sh package/compile
-mkdir -p $DESTDIR/usr/bin
-install -m755 command/* $DESTDIR/usr/bin
+mkdir -p $DESTDIR$PREFIX/bin
+install -m755 command/* $DESTDIR$PREFIX/bin
 

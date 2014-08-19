@@ -5,4 +5,4 @@ default:
   build: 1
   release: 1
   summary: A collection of tools for managing UNIX services.
-
+  buildprefix: /usr
