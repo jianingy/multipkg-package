@@ -1,0 +1,11 @@
+default:
+  name: uw-imap
+  version: '2007f'
+  release: 3
+  summary: UW Server daemons for IMAP and POP network mail protocols
+  http: ftp://ftp.cac.washington.edu/mail/imap.tar.Z
+  buildprefix: /opt/uw-imap
+
+rpm:
+  buildrequires:
+    - pam-devel

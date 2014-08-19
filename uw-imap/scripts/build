@@ -1,0 +1,7 @@
+#!/bin/sh
+pwd
+sed -i -e 's/mailsubdir = NIL/mailsubdir = "mailbox"/' src/osdep/unix/env_unix.c
+make lr5 PASSWDTYPE=pam SSLTYPE=unix.nopwd
+BIN=$DESTDIR$PREFIX/bin
+mkdir -p $BIN
+find . -maxdepth 2  -type f  -perm 755 -not -path './tools/*' -exec install {} $BIN \;
