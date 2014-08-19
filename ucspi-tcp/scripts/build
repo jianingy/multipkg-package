@@ -1,0 +1,8 @@
+#!/bin/sh
+sed -i -e 's#gcc#gcc -include /usr/include/errno.h #g' conf-cc
+echo $PREFIX > conf-home
+make
+mkdir -p $DESTDIR$PREFIX/bin
+for bin in tcpserver tcpclient tcprules tcprulescheck tcpcat; do
+    install -m755 $bin $DESTDIR$PREFIX/bin
+done

@@ -1,0 +1,7 @@
+default:
+  name: ucspi-tcp
+  http: 'http://cr.yp.to/ucspi-tcp/ucspi-tcp-0.88.tar.gz'
+  version: '0.88'
+  release: 2
+  summary: tcpserver and tcpclient are easy-to-use command-line tools for building TCP client-server applications.
+  buildprefix: /usr
