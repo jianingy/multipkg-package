@@ -1,4 +1,4 @@
 #!/bin/sh
-start runsvdir-start
+start runsvdir
 mkdir -p /service /etc/sv
 exit 0
