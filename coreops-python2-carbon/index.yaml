@@ -1,6 +1,9 @@
 ---
 default:
-  name: python2-carbon
+  name: coreops-python2-carbon
   version: "0.9.12"
   pypi: carbon
   summary: an event-driven networking engine written in Python.
+
+buildrequire:
+  - coreops-python2-twisted
