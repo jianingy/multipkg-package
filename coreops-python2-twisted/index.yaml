@@ -1,0 +1,7 @@
+---
+default:
+  name: coreops-python2-twisted
+  version: "13.0.0"
+  pypi: Twisted
+  summary: an event-driven networking engine written in Python.
+  python: /home/coreops/bin/python
