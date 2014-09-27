@@ -2,9 +2,9 @@
 default:
   name: coreops-python2
   summary: 'Python is an interpreted, interactive, object-oriented programming language'
-  version: '2.7.6'
-  http: http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tgz
-  prefix: /home/coreops
+  version: '2.7.8'
+  http: https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
+  buildprefix: /home/coreops
 rpm:
   buildrequires:
     - bzip2-devel
