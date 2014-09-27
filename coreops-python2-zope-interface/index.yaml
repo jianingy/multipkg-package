@@ -1,0 +1,9 @@
+---
+default:
+  name: coreops-python2-zope-interface
+  version: "4.1.1"
+  pypi: zope.interface
+  summary: Interfaces for Python
+  python: /home/coreops/bin/python
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
