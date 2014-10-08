@@ -2,10 +2,15 @@
 default:
   name: coreops-python2-twisted
   version: "13.0.0"
+  release: 1
   pypi: Twisted
   summary: an event-driven networking engine written in Python.
   python: /home/coreops/bin/python
   env:
     LD_LIBRARY_PATH: /home/coreops/lib
+  requires:
+    - coreops-python2
+    - coreops-python2-zope-interface
   buildrequires:
+    - coreops-python2
     - coreops-python2-zope-interface

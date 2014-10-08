@@ -1,15 +1,14 @@
 ---
 default:
-  name: coreops-python2-carbon
+  name: coreops-python2-whisper
   version: "0.9.12"
   release: 1
-  pypi: carbon
-  summary: Backend data caching and persistence daemon for Graphite
+  pypi: whisper
+  summary: Fixed size round-robin style database
   python: /home/coreops/bin/python
   requires:
     - coreops-python2
     - coreops-python2-twisted
-    - coreops-python2-whisper
   buildrequires:
     - coreops-python2
     - coreops-python2-twisted

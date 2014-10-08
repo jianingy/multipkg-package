@@ -7,3 +7,7 @@ default:
   python: /home/coreops/bin/python
   env:
     LD_LIBRARY_PATH: /home/coreops/lib
+  requires:
+    - coreops-python2
+  buildrequires:
+    - coreops-python2
