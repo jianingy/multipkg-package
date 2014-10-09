@@ -1,0 +1,16 @@
+---
+default:
+  name: coreops-python2-gunicorn
+  version: "19.1.1"
+  release: 1
+  pypi: gunicorn
+  summary: WSGI HTTP Server for UNIX
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+    - coreops-python2-setuptools
+  buildrequires:
+    - coreops-python2
+    - coreops-python2-setuptools
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
