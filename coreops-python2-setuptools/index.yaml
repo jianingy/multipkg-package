@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-python2-setuptools
+  version: "6.0.2"
+  release: 1
+  pypi: setuptools
+  summary: Easily download, build, install, upgrade, and uninstall Python packages
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+  buildrequires:
+    - coreops-python2
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
