@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-python2-tagging
+  version: "0.2.1.186"
+  release: 3
+  summary: Generic tagging application for Django
+  python: /home/coreops/bin/python
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
+  requires:
+    - coreops-python2
+    - coreops-python2-django
+  buildrequires:
+    - coreops-python2
