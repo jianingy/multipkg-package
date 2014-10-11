@@ -1,0 +1,16 @@
+---
+default:
+  name: coreops-python2-graphite-web
+  version: "0.9.12"
+  release: 2
+  pypi: graphite-web
+  summary: Enterprise scalable realtime graphing
+  python: /home/coreops/bin/python
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
+  requires:
+    - coreops-python2
+    - coreops-python2-django
+    - coreops-python2-tagging
+  buildrequires:
+    - coreops-python2
