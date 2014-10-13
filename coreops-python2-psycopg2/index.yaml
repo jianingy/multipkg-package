@@ -1,0 +1,17 @@
+---
+default:
+  name: coreops-python2-psycopg2
+  version: "2.5.4"
+  release: 1
+  pypi: psycopg2
+  summary: Python-PostgreSQL Database Adapter
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+    - postgresql93
+  buildrequires:
+    - coreops-python2
+    - postgresql93-devel
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
+    PATH: /usr/pgsql-9.3/bin:/usr/bin:/bin
