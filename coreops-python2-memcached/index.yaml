@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-python2-memcached
+  version: "1.53"
+  release: 1
+  pypi: python-memcached
+  summary: Pure python memcached client
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+  buildrequires:
+    - coreops-python2
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
