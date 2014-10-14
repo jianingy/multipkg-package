@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-python2-django
+  version: "1.3"
+  release: 1
+  pypi: Django
+  summary: Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+  python: /home/coreops/bin/python
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
+  requires:
+    - coreops-python2
+  buildrequires:
+    - coreops-python2
