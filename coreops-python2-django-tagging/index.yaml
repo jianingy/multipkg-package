@@ -1,8 +1,9 @@
 ---
 default:
-  name: coreops-python2-tagging
-  version: "0.2.1.186"
-  release: 3
+  name: coreops-python2-django-tagging
+  version: "0.3.1"
+  release: 1
+  pypi: django-tagging
   summary: Generic tagging application for Django
   python: /home/coreops/bin/python
   env:
