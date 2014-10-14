@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-python2-simplejson
+  version: "3.6.4"
+  release: 1
+  pypi: simplejson
+  summary: Simple, fast, extensible JSON encoder/decoder for Python
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+  buildrequires:
+    - coreops-python2
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
