@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-python2-pytz
+  version: "2014.7"
+  release: 1
+  pypi: pytz
+  summary: World timezone definitions, modern and historical
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+  buildrequires:
+    - coreops-python2
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
