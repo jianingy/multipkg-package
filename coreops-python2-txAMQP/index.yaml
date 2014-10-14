@@ -1,0 +1,16 @@
+---
+default:
+  name: coreops-python2-txAMQP
+  version: "0.6.2"
+  release: 1
+  pypi: txAMQP
+  summary: Python library for communicating with AMQP peers and brokers using Twisted
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+    - coreops-python2-twisted
+  buildrequires:
+    - coreops-python2
+    - coreops-python2-twisted
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
