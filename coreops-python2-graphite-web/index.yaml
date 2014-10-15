@@ -18,8 +18,8 @@ default:
     - coreops-python2-memcached
     - coreops-python2-gunicorn
     - coreops-python2-pytz
-    - coreops-python2-cairo
+    - coreops-python2-pycairo
   buildrequires:
     - coreops-python2
 rpm:
-  release: 5%{?dist}
+  release: 6%{?dist}
