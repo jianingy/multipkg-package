@@ -15,3 +15,5 @@ default:
   env:
     LD_LIBRARY_PATH: /home/coreops/lib
     PATH: /usr/pgsql-9.3/bin:/usr/bin:/bin
+rpm:
+  release: 2%{?dist}

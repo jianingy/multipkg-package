@@ -12,3 +12,5 @@ rpm:
     - readline-devel
     - openssl-devel
     - zlib-devel
+rpm:
+  release: 2%{?dist}

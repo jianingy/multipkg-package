@@ -2,7 +2,6 @@ default:
   name: compton
   git: http://github.com/chjj/compton
   version: '0.01'
-  build: 1
   summary: A compositor for X11
 
 deb:
@@ -11,3 +10,6 @@ deb:
     - libdbus-1-dev
     - libgl1-mesa-dev
     - asciidoc
+
+rpm:
+  release: 2%{?dist}

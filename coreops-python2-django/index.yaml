@@ -12,3 +12,5 @@ default:
     - coreops-python2
   buildrequires:
     - coreops-python2
+rpm:
+  release: 2%{?dist}

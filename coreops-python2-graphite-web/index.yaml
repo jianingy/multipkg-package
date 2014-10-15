@@ -20,3 +20,5 @@ default:
     - coreops-python2-pytz
   buildrequires:
     - coreops-python2
+rpm:
+  release: 4%{?dist}

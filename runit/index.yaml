@@ -10,3 +10,4 @@ default:
 rpm:
   buildrequires:
     - glibc-static
+  release: 2%{?dist}

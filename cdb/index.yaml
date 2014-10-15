@@ -5,3 +5,5 @@ default:
   release: 5
   summary: A collection of tools for managing UNIX services.
   prefix: /usr
+rpm:
+  release: 5%{?dist}

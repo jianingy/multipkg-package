@@ -12,3 +12,5 @@ default:
     - coreops-python2
   env:
     LD_LIBRARY_PATH: /home/coreops/lib
+rpm:
+  release: 2%{?dist}

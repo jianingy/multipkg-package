@@ -13,3 +13,5 @@ default:
     - coreops-python2-django
   buildrequires:
     - coreops-python2
+rpm:
+  release: 2%{?dist}
