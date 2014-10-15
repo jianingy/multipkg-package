@@ -1,0 +1,18 @@
+---
+default:
+  name: coreops-python2-pycairo
+  version: "1.8.8"
+  release: 1
+  summary: cairo python binding
+  http: http://cairographics.org/releases/pycairo-1.8.8.tar.gz
+  python: /home/coreops/bin/python
+  requires:
+    - coreops-python2
+    - cairo
+  buildrequires:
+    - coreops-python2
+    - cairo-devel
+  env:
+    LD_LIBRARY_PATH: /home/coreops/lib
+rpm:
+  release: 1%{?dist}
