@@ -19,7 +19,8 @@ default:
     - coreops-python2-gunicorn
     - coreops-python2-pytz
     - coreops-python2-pycairo
+    - dejavu-sans-fonts
   buildrequires:
     - coreops-python2
 rpm:
-  release: 6%{?dist}
+  release: 7%{?dist}
