@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-graphite-web
+  version: "0.9.2"
+  summary: graphite-web
+  python: /opt/coreops-carbon/bin/python
+  env:
+    LD_LIBRARY_PATH: /opt/coreops-carbon/lib
+  requires:
+    - coreops-carbon-python
+  buildrequires:
+    - coreops-carbon-python
+rpm:
+  release: 11%{?dist}
