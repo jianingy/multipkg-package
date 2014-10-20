@@ -11,4 +11,4 @@ default:
   buildrequires:
     - coreops-carbon-python
 rpm:
-  release: 7%{?dist}
+  release: 8%{?dist}

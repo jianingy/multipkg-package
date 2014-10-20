@@ -5,7 +5,6 @@ root=$(dirname $PYTHON)
 $root/pip install --root $DESTDIR -r requirements.txt || exit 1
 $root/pip install --root $DESTDIR 'whisper==0.9.12' || exit 1
 $root/pip install --root $DESTDIR 'carbon==0.9.12' || exit 1
-$root/pip install --root $DESTDIR 'graphite-web==0.9.12' || exit 1
 $root/pip install --root $DESTDIR 'gunicorn==18.0' || exit 1
 $root/pip install --root $DESTDIR 'Twisted==13.0' || exit 1
 $root/python ./setup.py build || exit 1
