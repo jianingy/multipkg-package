@@ -1,0 +1,17 @@
+---
+default:
+  name: coreops-carbon-python
+  summary: 'Python for coreops-carbon'
+  version: '2.7.8'
+  http: https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
+  python: /opt/coreops-carbon/bin/python
+  buildprefix: /opt/coreops-carbon
+rpm:
+  buildrequires:
+    - bzip2-devel
+    - sqlite-devel
+    - readline-devel
+    - openssl-devel
+    - zlib-devel
+rpm:
+  release: 6%{?dist}

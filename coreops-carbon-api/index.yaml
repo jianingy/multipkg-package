@@ -1,0 +1,14 @@
+---
+default:
+  name: coreops-carbon-api
+  version: "1.0.1"
+  summary: Carbon with graphite-api
+  python: /opt/coreops-carbon/bin/python
+  env:
+    LD_LIBRARY_PATH: /opt/coreops-carbon/lib
+  requires:
+    - coreops-carbon-python
+  buildrequires:
+    - coreops-carbon-python
+rpm:
+  release: 7%{?dist}

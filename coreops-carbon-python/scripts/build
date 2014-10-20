@@ -1,0 +1,12 @@
+#!/bin/sh
+./configure --prefix=$PREFIX --enable-shared --with-threads --enable-ipv6 \
+                             --enable-unicode=ucs4 --with-system=expat \
+                             --with-system-ffi --with-dbmliborder=gdbm:ndbm || exit 111
+make -j 4 || exit 111
+make install DESTDIR=$DESTDIR || exit 111
+wget --no-check-certificate https://bootstrap.pypa.io/ez_setup.py -O - | $DESTDIR/$PREFIX/bin/python || exit 111
+wget --no-check-certificate https://pypi.python.org/packages/source/p/pip/pip-1.5.6.tar.gz#md5=01026f87978932060cc86c1dc527903e || exit 111
+
+tar zxvf pip-1.5.6.tar.gz || exit 111
+cd pip-1.5.6
+$DESTDIR/$PREFIX/bin/python ./setup.py install --root $DESTDIR --prefix $PREFIX
