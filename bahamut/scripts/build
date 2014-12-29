@@ -1,0 +1,6 @@
+#!/bin/sh
+echo DESTDIR=$DESTDIR PREFIX=$PREFIX
+./configure --prefix=$PREFIX || exit 111
+make || exit 112
+mkdir -p $DESTDIR$PREFIX || exit 113
+make install INSTALL_DIR=$DESTDIR$PREFIX || exit 113 

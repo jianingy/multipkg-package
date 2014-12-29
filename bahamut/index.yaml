@@ -1,0 +1,8 @@
+---
+default:
+  name: bahamut-ircd
+  release: '1'
+  summary: The bahamut IRC Server
+  version: '2.0.7'
+  http: http://code.dal.net/release/bahamut-2.0.7.tar.gz
+  buildprefix: /opt/bahamut
