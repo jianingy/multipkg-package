@@ -1,0 +1,12 @@
+---
+default:
+  name: ocamlscript
+  release: '1'
+  summary: Write an OCaml script, run an optimized executable
+  version: '2.0.4'
+  git: https://github.com/mjambon/ocamlscript.git
+  prefix: /usr
+deb:
+ buildrequires:
+   - camlp4-extra
+   - ocaml

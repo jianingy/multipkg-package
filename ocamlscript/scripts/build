@@ -1,0 +1,5 @@
+#!/bin/sh
+
+make
+mkdir -p $DESTDIR$PREFIX/bin
+install -m755 ocamlscript $DESTDIR$PREFIX/bin/ocamlscript
