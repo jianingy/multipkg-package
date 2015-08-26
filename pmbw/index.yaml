@@ -1,0 +1,8 @@
+---
+default:
+  build: '1'
+  name: pmbw
+  release: '1'
+  summary: A Memory Bandwidth Tester
+  version: '0.6.2'
+  http: https://panthema.net/2013/pmbw/pmbw-0.6.2.tar.bz2
