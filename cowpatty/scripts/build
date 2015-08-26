@@ -1,0 +1,5 @@
+#!/bin/bash
+
+make || exit 1
+mkdir $DESTDIR$PREFIX/bin -p || exit 1
+install -m755 cowpatty $DESTDIR$PREFIX/bin/cowpatty
