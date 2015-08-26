@@ -1,0 +1,4 @@
+#!/bin/sh -e
+./configure --prefix=$PREFIX
+make
+make install DESTDIR=$DESTDIR
