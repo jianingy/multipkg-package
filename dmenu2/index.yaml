@@ -4,5 +4,5 @@ default:
   release: '1'
   summary: dmenu2 is the fork of original dmenu - an efficient dynamic menu for X
   version: '0.2'
-  http: https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz
+  #http: https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz
   buildprefix: /opt/dmenu2
