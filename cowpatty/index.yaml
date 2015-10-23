@@ -4,7 +4,7 @@ default:
   release: '1'
   summary: Implementation of an offline dictionary attack against WPA/WPA2 networks using PSK-based authentication
   version: '4.6'
-  #http: http://www.willhackforsushi.com/code/cowpatty/4.6/cowpatty-4.6.tgz
+  http: http://www.willhackforsushi.com/code/cowpatty/4.6/cowpatty-4.6.tgz
   buildprefix: /usr
 deb:
   buildrequires:

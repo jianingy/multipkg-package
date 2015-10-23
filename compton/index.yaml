@@ -10,6 +10,8 @@ deb:
     - libdbus-1-dev
     - libgl1-mesa-dev
     - asciidoc
+    - libxcomposite-dev
+    - libpcre3-dev
 
 rpm:
   release: 2%{?dist}
