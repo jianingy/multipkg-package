@@ -1,0 +1,9 @@
+---
+default:
+  name: liblinear2
+  release: '1'
+  summary: Linear Classifier
+  version: '2.1'
+  buildprefix: /usr
+  provides:
+    - liblinear

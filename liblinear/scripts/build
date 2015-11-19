@@ -1,0 +1,11 @@
+#!/bin/bash
+
+make all || exit 111
+make lib || exit 112
+
+mkdir -pv $DESTDIR$PREFIX/{bin,lib} || exit 113
+install -m755 predict $DESTDIR$PREFIX/bin/liblinear2-predict
+install -m755 train $DESTDIR$PREFIX/bin/liblinear2-train
+install -m755 liblinear.so.3 $DESTDIR$PREFIX/lib/liblinear.so.3
+
+
