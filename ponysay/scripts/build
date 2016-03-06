@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python3 ./setup.py install --prefix "$PREFIX" --dest-dir "$DESTDIR" --freedom=partial  --everything --with-pdf=/usr/share/doc/ponysay --without-pdf-compression

@@ -1,0 +1,7 @@
+---
+default:
+  name: ponysay
+  summary: The Editor
+  version: '3.0.2'
+  buildprefix: /usr
+  #http: http://codeload.github.com/erkin/ponysay/legacy.tar.gz/3.0.2
