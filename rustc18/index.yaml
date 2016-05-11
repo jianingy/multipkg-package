@@ -1,0 +1,7 @@
+---
+default:
+  name: rustc18
+  summary: The rust-lang compiler
+  version: '1.8.0'
+  release: 1
+  http: http://static.rust-lang.org/dist/rustc-1.8.0-x86_64-unknown-linux-gnu.tar.gz

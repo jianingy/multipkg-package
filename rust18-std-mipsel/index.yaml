@@ -1,0 +1,9 @@
+---
+default:
+  name: rust18-std-mipsel
+  summary: Rust stdlib for mipsel
+  version: '1.8.0'
+  release: 1
+  http: http://static.rust-lang.org/dist/rust-std-1.8.0-mipsel-unknown-linux-gnu.tar.gz
+  requires:
+    - rustc18

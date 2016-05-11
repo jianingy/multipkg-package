@@ -1,0 +1,8 @@
+#!/bin/sh
+
+./install.sh --destdir=$DESTDIR --prefix=$PREFIX
+rm -f $DESTDIR$PREFIX/lib/rustlib/rust-installer-version
+rm -f $DESTDIR$PREFIX/lib/rustlib/components
+rm -f $DESTDIR$PREFIX/lib/rustlib/install.log
+rm -f $DESTDIR$PREFIX/lib/rustlib/uninstall.sh
+rm -f $DESTDIR$PREFIX/lib/rustlib/manifest-*
