@@ -1,0 +1,45 @@
+#! perl
+
+=head1 NAME
+
+change terminal background color depends on title name
+
+
+=head1 DESCRIPTION
+
+=head1 AUTHOR
+
+Jianing Yang <jianingy.yang at gmail.com>
+
+=cut
+
+
+sub my_resource {
+  $_[0]->x_resource ("%.$_[1]")
+}
+
+sub on_osc_seq {
+  my ($self, $op, $args, $resp) = @_;
+  return () if $op != 2;
+  foreach (@{$self->{rules}}) {
+    if ($args =~ /$_->[0]/) {
+      print "$args // $_->[0]\n";
+      $self->cmd_parse(sprintf("\33]11;#%s\007", $_->[1]));
+      $self->cmd_parse(sprintf("\33]708;#%s\007", $_->[1]));
+      return ();
+    }
+  };
+  ()
+}
+
+sub on_start {
+  my ($self) = @_;
+  my $rules = $self->my_resource("rules");
+  $self->{rules} = ();
+  foreach (split(/,/, $rules)) {
+      my ($regexp, $color) = split /#/;
+      $regexp =~ s#^/|/$##g;
+      my @rule = ($regexp, $color);
+      push @{$self->{rules}}, \@rule;
+  }
+}
