@@ -23,7 +23,6 @@ sub on_osc_seq {
   return () if $op != 2;
   foreach (@{$self->{rules}}) {
     if ($args =~ /$_->[0]/) {
-      print "$args // $_->[0]\n";
       $self->cmd_parse(sprintf("\33]11;#%s\007", $_->[1]));
       $self->cmd_parse(sprintf("\33]708;#%s\007", $_->[1]));
       return ();
