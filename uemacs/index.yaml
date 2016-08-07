@@ -1,0 +1,8 @@
+---
+default:
+  build: '1'
+  name: jasspa-uemacs
+  release: '1'
+  summary: "jasspa's micro emacs"
+  version: '20091011'
+  buildprefix: /usr

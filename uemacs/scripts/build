@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./build || exit 111
+mkdir -p $DESTDIR$PREFIX/bin/
+install -m755 me $DESTDIR$PREFIX/bin/me
