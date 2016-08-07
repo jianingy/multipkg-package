@@ -3,5 +3,5 @@
 mkdir -p $DESTDIR$PREFIX/bin/
 mkdir -p $DESTDIR$PREFIX/share/microemacs
 ./build -p $PREFIX/share/microemacs || exit 111
-install -m755 me $DESTDIR$PREFIX/bin/me
+install -m755 mecw $DESTDIR$PREFIX/bin/mecw
 rsync -avP metree/ $DESTDIR$PREFIX/share/microemacs/
