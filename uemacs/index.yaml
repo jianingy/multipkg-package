@@ -1,7 +1,7 @@
 ---
 default:
   build: '1'
-  name: jasspa-uemacs
+  name: jasspa-microemacs
   release: '1'
   summary: "jasspa's micro emacs"
   version: '20091011'
