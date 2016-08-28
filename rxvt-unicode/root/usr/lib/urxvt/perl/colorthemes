@@ -74,9 +74,8 @@ sub on_osc_seq {
   return () if $op != 2;
   my @rules = @{$self->{title_rules}};
   foreach (@rules) {
-      print "try $args <> $_->[0]\n";
       if ($_->[0] && $args =~ /$_->[0]/) {
-          print "matched $_->[0]\n";
+          last if $_->[1] eq 'default';
           if (-e $self->theme($_->[1])) {
               $self->apply_theme($self->theme($_->[1]));
           }
