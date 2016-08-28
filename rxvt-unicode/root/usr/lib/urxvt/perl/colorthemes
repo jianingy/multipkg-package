@@ -72,7 +72,9 @@ sub apply_theme {
 sub on_osc_seq {
   my ($self, $op, $args, $resp) = @_;
   return () if $op != 2;
-  foreach (@{$self->{title_rules}}) {
+  my @rules = @{$self->{title_rules}};
+  foreach (@rules) {
+      print "try $args <> $_->[0]\n";
       if ($_->[0] && $args =~ /$_->[0]/) {
           print "matched $_->[0]\n";
           if (-e $self->theme($_->[1])) {
@@ -108,4 +110,5 @@ sub on_start {
         my @rule = ($regexp, $theme);
         push @{$self->{title_rules}}, \@rule;
     }
+    ();
 }
