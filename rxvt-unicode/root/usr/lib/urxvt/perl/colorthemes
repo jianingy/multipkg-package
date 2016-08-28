@@ -1,0 +1,111 @@
+#! perl
+
+=head1 NAME
+
+color themes support for rxvt-unicode. also support automatically theme
+changing acccording to title regex
+
+
+=head1 DESCRIPTION
+
+Example configuration:
+
+    URxvt.colorthemes.directory: ~/.Xresources.d/themes
+    URxvt.colorthemes.name: tomorrow-night
+    URxvt.colorthemes.rules.title: /[.]bj0/:tron
+
+=head1 AUTHOR
+
+Jianing Yang <jianingy.yang at gmail.com>
+
+=cut
+
+use strict;
+
+sub ext_resource {
+  $_[0]->x_resource ("%.$_[1]")
+}
+
+sub send_osc {
+    my ($self, $cmd, $val) = @_;
+    $cmd =~ s/^\s+|\s+$//g;
+    $val =~ s/^\s+|\s+$//g;
+    $self->cmd_parse(sprintf("\33]%s;%s\007", $cmd, $val));
+}
+
+sub theme {
+    my ($self, $name) = @_;
+    my $directory = $self->{theme_directory};
+    $directory =~ s#/$##g;
+    $name =~ s#/$##g;
+    my @found = glob($directory ."/". $name . ".urxvt");
+    shift @found
+}
+
+sub apply_theme {
+    my ($self, $theme) = @_;
+    return unless -e $theme;
+    open THEME, "<", $theme;
+    while (<THEME>) {
+        next unless /Urxvt[*.]/i;
+        s/^URxvt[*.]//i;
+        ($_, my $val) = split/\s*:\s*/;
+        if (/color(\d+)/i) {
+            $self->send_osc(4, "$1;$val")
+        }
+        elsif (/foreground/) {
+            $self->send_osc(10, $val)
+        }
+        elsif (/background/) {
+            $self->send_osc(11, $val)
+        }
+        elsif (/cursorColor/) {
+            $self->send_osc(12, $val)
+        }
+        elsif (/borderColor/) {
+            $self->send_osc(708, $val)
+        }
+    }
+    1;
+}
+
+sub on_osc_seq {
+  my ($self, $op, $args, $resp) = @_;
+  return () if $op != 2;
+  foreach (@{$self->{title_rules}}) {
+      if ($_->[0] && $args =~ /$_->[0]/) {
+          print "matched $_->[0]\n";
+          if (-e $self->theme($_->[1])) {
+              $self->apply_theme($self->theme($_->[1]));
+          }
+          return ();
+      }
+  };
+  $self->apply_theme($self->theme($self->{default}));
+  ()
+}
+
+sub on_start {
+    my ($self) = @_;
+    my $name = undef;
+    $self->{theme_directory} = $self->ext_resource("directory");
+
+    # override by environment variable
+    if (defined($ENV{URXVT_THEME}) && -e $self->theme($ENV{URXVT_THEME})) {
+        $name = $ENV{URXVT_THEME};
+    } else {
+        $name = $self->ext_resource("name");
+    }
+    $name =~ s/^\s+|\s+$//g;
+    $self->{default} = $name;
+    $self->apply_theme($self->theme($self->{default}));
+
+    my $title_rules = $self->ext_resource("rules.title");
+    $self->{title_rules} = ();
+    foreach (split(/,/, $title_rules)) {
+        my ($regexp, $theme) = split /:/;
+        $regexp =~ s#^/|/$##g;
+        my @rule = ($regexp, $theme);
+        push @{$self->{title_rules}}, \@rule;
+    }
+}

@@ -3,8 +3,8 @@ default:
   release: '3'
   name: rxvt-unicode
   summary: The Editor
-  version: '9.21'
-  http: http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.21.tar.bz2
+  version: '9.22'
+  #http: http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.22.tar.bz2
 deb:
   buildrequires:
     - libperl-dev
