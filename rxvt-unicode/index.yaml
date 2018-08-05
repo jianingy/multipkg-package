@@ -1,6 +1,6 @@
 ---
 default:
-  release: '3'
+  release: '4'
   name: rxvt-unicode
   summary: The Editor
   version: '9.22'

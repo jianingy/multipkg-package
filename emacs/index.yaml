@@ -1,11 +1,11 @@
 ---
 default:
   build: '1'
-  name: emacs24
+  name: emacs25
   release: '1'
   summary: The Editor
-  version: '24.3.1'
-  http: http://ftp.gnu.org/gnu/emacs/emacs-24.3.tar.gz
+  version: '25.1'
+  #http: http://ftp.gnu.org/gnu/emacs/emacs-25.1.tar.gz
 rpm:
  buildrequires:
   - xorg-x11-server-devel
@@ -14,3 +14,6 @@ rpm:
   - giflib-devel
   - libtiff-devel
   - libpng-devel
+deb:
+  buildrequires:
+  - libwebkitgtk-3.0-dev

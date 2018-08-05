@@ -2,7 +2,8 @@
 
 ./configure --prefix=/usr \
     --with-terminfo=/usr/share/terminfo \
-	--enable-256-color \
-	--with-term=rxvt-256color || return 1
+    --enable-unicode3 \
+    --enable-256-color \
+    --with-term=rxvt-256color || return 1
 make || return 1
 make install DESTDIR=$DESTDIR

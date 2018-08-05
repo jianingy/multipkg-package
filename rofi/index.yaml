@@ -4,7 +4,7 @@ default:
   release: '2'
   summary: 'A popup window switcher roughly based on superswitcher, requiring only xlib and pango'
   version: '0.15.7'
-  http: https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz
+  #http: https://bitbucket.org/melek/dmenu2/downloads/dmenu2-0.2.tar.gz
   buildprefix: /usr
 deb:
   buildrequires:

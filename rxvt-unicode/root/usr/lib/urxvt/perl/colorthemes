@@ -71,7 +71,7 @@ sub apply_theme {
 
 sub on_osc_seq {
   my ($self, $op, $args, $resp) = @_;
-  return () if $op != 2;
+  return () if $op != 0;
   my @rules = @{$self->{title_rules}};
   foreach (@rules) {
       if ($_->[0] && $args =~ /$_->[0]/) {
