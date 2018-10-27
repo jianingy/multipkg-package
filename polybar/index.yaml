@@ -1,0 +1,28 @@
+---
+default:
+  build: '1'
+  name: polybar
+  release: '1'
+  summary: fast and easy-to-use status bar
+  version: '3.2.1'
+  http: https://github.com/jaagr/polybar/archive/3.2.1.tar.gz
+deb:
+  buildrequires:
+  - libcairo2-dev
+  - libxcb1-dev
+  - python2-dev
+  - libxcb-ewmh-dev
+  - libxcb-icccm4-dev
+  - libxcb-image0-dev
+  - libxcb-randr0-dev
+  - libxcb-util0-dev
+  - libxcb-xkb-dev
+  - pkg-config
+  - python-xcbgen
+  - xcb-proto
+  - libxcb-xrm-dev
+  - libasound2-dev
+  - libmpdclient-dev
+  - libiw-dev
+  - libcurl4-openssl-dev
+  - libpulse-dev
