@@ -49,7 +49,7 @@ sub apply_theme {
     while (<THEME>) {
         next unless /Urxvt[*.]/i;
         s/^URxvt[*.]//i;
-        ($_, my $val) = split /\s*:\s*/, $_, 1;
+        ($_, my $val) = split /\s*:\s*/, $_, 2;
         if (/color(\d+)/i) {
             $self->send_osc(4, "$1;$val")
         }
