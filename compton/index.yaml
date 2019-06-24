@@ -1,7 +1,7 @@
 default:
   name: compton
-  git: http://github.com/chjj/compton
-  version: '0.01'
+  git: https://github.com/yshui/compton
+  version: '0.2'
   summary: A compositor for X11
 
 deb:

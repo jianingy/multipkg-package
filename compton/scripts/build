@@ -1,4 +1,5 @@
 #!/bin/sh
 
-make
+meson --buildtype=release . build
+ninja -C build
 make DESTDIR=$DESTDIR install
